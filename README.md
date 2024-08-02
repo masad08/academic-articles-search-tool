@@ -3,7 +3,7 @@
 ## Overview
 This tool is designed to search for academic articles across multiple databases. It runs locally on your PC and provides an easy-to-use interface for researchers, students, and academics to find relevant literature.
 
-![Academic Articles Search Tool Screenshot](assets/ast.png)
+![Academic Articles Search Tool Screenshot](assets/ast1.png)
 *Screenshot of the Academic Articles Search Tool interface*
 
 ## Features
