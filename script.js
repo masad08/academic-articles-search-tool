@@ -17,6 +17,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     let db;
     await initDatabase();
 
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarOpen = document.getElementById('sidebarOpen');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function openSidebar() {
+        sidebar.style.transform = 'translateX(0)';
+        sidebarOpen.style.display = 'none';
+    }
+    
+
+    function closeSidebar() {
+        sidebar.style.transform = 'translateX(-100%)';
+        sidebarOpen.style.display = 'block';
+    }
+    
+
+    sidebarOpen.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+
+// Check screen size and set initial sidebar state
+if (window.innerWidth <= 768) {
+    openSidebar();
+} else {
+    // For larger screens, hide the open button and show the sidebar
+    sidebarOpen.style.display = 'none';
+    sidebar.classList.add('open');
+}
+
+
     function clearDatabase() {
         db.run("DELETE FROM articles");
         searchResults = [];
@@ -387,7 +416,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        const items = data.results; 
+        const items = data.results;
 
         storeDataInDb(items);
         return items;
@@ -396,7 +425,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function displayResultsFromDb(offset, limit) {
         resultsContainer.innerHTML = '';
         const stmt = db.prepare("SELECT * FROM articles LIMIT ? OFFSET ?");
-        searchResults = []; 
+        searchResults = [];
         stmt.bind([limit, offset]);
 
         while (stmt.step()) {
