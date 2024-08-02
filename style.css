@@ -1,9 +1,65 @@
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mesveda';
+  src: url('../fonts/Mesveda-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Mesveda', Arial, sans-serif;
   background-color: #f0f2f5;
   color: #333;
 }
@@ -51,7 +107,7 @@ form {
   border: 1px solid #bdc3c7;
   border-radius: 4px;
   font-size: 14px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Mesveda', Arial, sans-serif;
   transition: border-color 0.3s;
 }
 
@@ -82,12 +138,12 @@ select, button {
   border: 1px solid #bdc3c7;
   border-radius: 4px;
   font-size: 14px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Mesveda', Arial, sans-serif;
   background-color: #ffffff;
 }
 
 button {
-  background-color: #3498db;
+  background-color: #16405c;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -96,7 +152,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #081722;
   transform: scale(1.05);
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -167,7 +223,7 @@ button:disabled:hover {
   border: 1px solid #bdc3c7;
   border-radius: 4px;
   font-size: 14px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Mesveda', Arial, sans-serif;
 }
 
 #preloader {
@@ -233,5 +289,20 @@ button:disabled:hover {
 .database-selection label {
     display: block;
     margin-bottom: 5px;
+}
+
+#results-count {
+  text-align: center;
+  font-weight: bold;
+  background-color: #87CEEB;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%, 100% { background-color: rgba(171, 220, 240, 0.5); }
+  50% { background-color: rgba(135, 206, 235, 1); }
 }
 
