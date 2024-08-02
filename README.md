@@ -25,6 +25,8 @@ This tool is designed to search for academic articles across multiple databases.
    ```
 3. Open `index.html` in your web browser.
 
+Or just download the files into a directory on your computer, then just click the index.html and start using the tool.
+
 ## Usage
 1. Enter your search query, author name, or title in the respective fields.
 2. Select the databases you want to search (Crossref or OpenAlex).
