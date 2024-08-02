@@ -22,7 +22,7 @@ You have two options for installation:
 
 ### Option 1: Simple Download and Use
 1. Download all the files from this repository into a directory on your computer.
-2. Open the `index.html` file in your web browser.
+2. Open the `artice-search-tool.html` file in your web browser.
 3. Start using the tool immediately.
 
 ### Option 2: Clone the Repository
