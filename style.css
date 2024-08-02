@@ -330,10 +330,18 @@ button:disabled:hover {
 .sidebar {
   transform: translateX(0);
 }
+
+.sidebar-open, .sidebar-rectangle {
+  display: none;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .sidebar-open, .sidebar-rectangle {
+    display: block;
   }
 
   .sidebar {
